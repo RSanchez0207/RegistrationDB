@@ -11,7 +11,8 @@
 
     <h1><b>CREATE AN ACCOUNT</b></h1>
     
-    <div class="containerOne">
+    <form id="createform" action="accountPage.php" method="POST">
+		<div class="containerOne">
     
         <label for="lastName"><b>LAST NAME</b></label>
             <input type="text" placeholder="Last Name" name="lastName" id="lastName" required>
@@ -20,13 +21,14 @@
             <input type="text" placeholder="First Name" name="firstName" id="firstName" required>
         
         <label for="middleInitial"><b>M.I.</b></label>
-            <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial" optional>
+            <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial" maxlength="2" optional>
         
         <label for="studentNumber"><b>STUDENT NUMBER</b></label>
-            <input type="text" placeholder="Student Number" name="studentNumber" id="studentNumber" required>
+            <input type="number" placeholder="Student Number" name="studentNumber" id="studentNumber" maxlength="11" minlength="11" required>
         
         <label for="yearLevel"><b>YEAR LEVEL</b></label>
             <select name="yearLevel" id="yearLevel">
+				<option value="" disabled selected>Select Year:</option>
                 <option value="1st">1st</option>
                 <option value="2nd">2nd</option>
                 <option value="3rd">3rd</option>
@@ -37,20 +39,20 @@
             <input type="date" placeholder="Birthday" name="userBirthday" id="userBirthday" required>
         
         <label for="mobileNumber"><b>MOBILE NUMBER</b></label>
-            <input type="text" placeholder="ex. 0999 999 9999" name="mobileNumber" id="mobileNumber" required>
+            <input type="number" placeholder="ex. +63 999 999 9999" name="mobileNumber" id="mobileNumber" maxlength="11" minlength="11" required>
         
         <label for="emailAddress"><b>EMAIL ADDRESS</b></label>
-            <input type="text" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress" id="emailAddress" required>
+            <input type="email" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress" id="emailAddress" required>
     
     </div>
     
     <div class="containerTwo">
         
         <label for="userName"><b>USERNAME</b></label>
-            <input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" id="userName" required>
+            <input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" id="userName" maxlength="15" minlength="8" required>
     
       <label for="userPassword"><b>PASSWORD</b></label>
-            <input type="password" placeholder="Password" name="userPassword" id="userPassword" required>
+            <input type="password" placeholder="Password" name="userPassword" id="userPassword"  maxlength="20" minlength="8"required>
     
        <label for="userRepeatPassword"><b>PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
@@ -60,6 +62,7 @@
         
     
     </div>
+	</form>
 
 
 
