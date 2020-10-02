@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel = "stylesheet" href = "HomePage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("password");
+            if (x.type == "password") {
+                x.type = "text";
+            } 
+            else {
+                x.type = "password";
+            }
+        }
+     </script>
+
+    <h1><b>LOG-IN PAGE</b></h1>
+    
+    <div class="container">
+    
+        <label for="username"><b>USERNAME</b></label>
+            <input type="text" placeholder="Username" name="username" id="username" required>
+        <label for="password"><b>PASSWORD</b></label>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+            <input class="checkBox" type="checkbox" onclick="myFunction()" name="viewPassword"  id="viewPassword">
+        
+        <button name="loginButton" id="loginButton"type="submit">           <b>LOGIN</b>
+        </button>
+        
+        <a href="http://localhost/RegistrationDB/AccountPage.html"><b>Create a new account</b></a>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
