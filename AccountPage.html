@@ -4,6 +4,7 @@
     <link rel = "stylesheet" href = "AccountPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+	<script src="validation.js"></script>
 </head>
 
 
@@ -15,7 +16,7 @@
 		<div class="containerOne">
     
         <label for="lastName"><b>LAST NAME</b></label>
-            <input type="text" placeholder="Last Name" name="lastName" id="lastName" required>
+            <input type="text" placeholder="Last Name" name="lastName" id="lastName" >
         
         <label for="firstName"><b>FIRST NAME</b></label>
             <input type="text" placeholder="First Name" name="firstName" id="firstName" required>
@@ -36,10 +37,10 @@
             </select>
         
         <label for="userBirthday"><b>BIRTHDAY</b></label>
-            <input type="date" placeholder="Birthday" name="userBirthday" id="userBirthday" required>
+            <input type="date" placeholder="Birthday" name="userBirthday" id="userBirthday" min="1961-01-01" max="2002-12-31" required>
         
         <label for="mobileNumber"><b>MOBILE NUMBER</b></label>
-            <input type="number" placeholder="ex. +63 999 999 9999" name="mobileNumber" id="mobileNumber" maxlength="11" minlength="11" required>
+            <input type="number"  placeholder="ex. +63 999 999 9999" name="mobileNumber" id="mobileNumber"   required>
         
         <label for="emailAddress"><b>EMAIL ADDRESS</b></label>
             <input type="email" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress" id="emailAddress" required>
@@ -57,7 +58,7 @@
        <label for="userRepeatPassword"><b>PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
         
-        <button name="loginButton" id="loginButton"type="onclick">           <b>SUBMIT</b>
+        <button name="loginButton" id="loginButton" onclick="return validate"> <b>SUBMIT</b>
         </button>
         
     
