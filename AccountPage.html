@@ -14,19 +14,39 @@
     
     <form id="createform" action="accountPage.php" method="POST">
 		<div class="containerOne">
-    
-        <label for="lastName"><b>LAST NAME</b></label>
+		
+		<div class="form-control">
+			<label for="lastName"><b>LAST NAME</b></label>
             <input type="text" placeholder="Last Name" name="lastName" id="lastName" >
-        
+			<i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+		</div>
+		
+		<div class="form-control">
         <label for="firstName"><b>FIRST NAME</b></label>
-            <input type="text" placeholder="First Name" name="firstName" id="firstName" required>
-        
+            <input type="text" placeholder="First Name" name="firstName" id="firstName" >
+			<i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+		</div>
+		
+		<div>
         <label for="middleInitial"><b>M.I.</b></label>
-            <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial" maxlength="2" optional>
-        
+            <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial"  >
+			<i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+		</div>
+		
+		<div>
         <label for="studentNumber"><b>STUDENT NUMBER</b></label>
-            <input type="number" placeholder="Student Number" name="studentNumber" id="studentNumber" maxlength="11" minlength="11" required>
-        
+            <input type="text" placeholder="Student Number" name="studentNumber" id="studentNumber"  >
+			<i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+		</div>
+		
         <label for="yearLevel"><b>YEAR LEVEL</b></label>
             <select name="yearLevel" id="yearLevel">
 				<option value="" disabled selected>Select Year:</option>
@@ -40,7 +60,7 @@
             <input type="date" placeholder="Birthday" name="userBirthday" id="userBirthday" min="1961-01-01" max="2002-10-5" required>
         
         <label for="mobileNumber"><b>MOBILE NUMBER</b></label>
-            <input type="tel" pattern="[+63]{3} [0-9]{3} [0-9]{3} [0-9]{4}" value='+63 ' placeholder="ex. +63 999 999 9999" name="mobileNumber" id="mobileNumber"   required>
+            <input type="tel" pattern="[+63]{3} [0-9]{10}" value='+63 ' maxlength="14" name="mobileNumber" id="mobileNumber"   required>
         
         <label for="emailAddress"><b>EMAIL ADDRESS</b></label>
             <input type="email" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress" id="emailAddress" required>
@@ -58,7 +78,7 @@
        <label for="userRepeatPassword"><b>PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
         
-        <button name="loginButton" id="loginButton" onclick="return validate"> <b>SUBMIT</b>
+        <button name="loginButton" id="loginButton" onclick="return validate()"> <b>SUBMIT</b>
         </button>
         
     
