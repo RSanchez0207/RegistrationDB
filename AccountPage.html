@@ -37,10 +37,10 @@
             </select>
         
         <label for="userBirthday"><b>BIRTHDAY</b></label>
-            <input type="date" placeholder="Birthday" name="userBirthday" id="userBirthday" min="1961-01-01" max="2002-12-31" required>
+            <input type="date" placeholder="Birthday" name="userBirthday" id="userBirthday" min="1961-01-01" max="2002-10-5" required>
         
         <label for="mobileNumber"><b>MOBILE NUMBER</b></label>
-            <input type="number"  placeholder="ex. +63 999 999 9999" name="mobileNumber" id="mobileNumber"   required>
+            <input type="tel" pattern="[+63]{3} [0-9]{3} [0-9]{3} [0-9]{4}" value='+63 ' placeholder="ex. +63 999 999 9999" name="mobileNumber" id="mobileNumber"   required>
         
         <label for="emailAddress"><b>EMAIL ADDRESS</b></label>
             <input type="email" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress" id="emailAddress" required>
