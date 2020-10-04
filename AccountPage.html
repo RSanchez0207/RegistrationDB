@@ -15,66 +15,90 @@
     <form id="createform" action="accountPage.php" method="POST">
 		<div class="containerOne">
 		
-		<div class="form-control">
-			<label for="lastName"><b>LAST NAME</b></label>
-            <input type="text" placeholder="Last Name" name="lastName" id="lastName" >
-			<i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-		</div>
+			<div class="form-control">
+				<label for="lastName"><b>LAST NAME</b></label>
+				<input type="text" placeholder="Last Name" name="lastName" id="lastName" >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			
+			<div class="form-control">
+			<label for="firstName"><b>FIRST NAME</b></label>
+				<input type="text" placeholder="First Name" name="firstName" id="firstName" >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			
+			<div class="form-control">
+			<label for="middleInitial"><b>M.I.</b></label>
+				<input type="text" placeholder="M.I." name="middleInitial" id="middleInitial"  >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			
+			<div class="form-control">
+			<label for="studentNumber"><b>STUDENT NUMBER</b></label>
+				<input type="text" placeholder="Student Number" name="studentNumber" maxlength="11" id="studentNumber"  >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
+			
+			<div class="form-control">
+				<label for="yearLevel"><b>YEAR LEVEL</b></label>
+					<select name="yearLevel" id="yearLevel" >
+						<option value="" disabled selected>Select Year:</option>
+						<option value="1st">1st</option>
+						<option value="2nd">2nd</option>
+						<option value="3rd">3rd</option>
+						<option value="5th">5th</option>
+					</select>
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+			</div>
+				
+			<label for="userBirthday"><b>BIRTHDAY</b></label>
+				<input type="date" min="1961-01-01" max="2002-10-3" placeholder="Birthday" name="userBirthday" id="userBirthday" required>
 		
-		<div class="form-control">
-        <label for="firstName"><b>FIRST NAME</b></label>
-            <input type="text" placeholder="First Name" name="firstName" id="firstName" >
-			<i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-		</div>
+			<div class="form-control">
+				<label for="mobileNumber"><b>MOBILE NUMBER</b></label>
+					<input type="tel"   maxlength="14" name="mobileNumber" value="+63 " id="mobileNumber" >
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+			</div>
+			
+			<div class="form-control">
+			<label for="emailAddress"><b>EMAIL ADDRESS</b></label>
+				<input type="text" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress"  id="emailAddress" >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+			</div>
 		
-		<div>
-        <label for="middleInitial"><b>M.I.</b></label>
-            <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial"  >
-			<i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
 		</div>
-		
-		<div>
-        <label for="studentNumber"><b>STUDENT NUMBER</b></label>
-            <input type="text" placeholder="Student Number" name="studentNumber" id="studentNumber"  >
-			<i class="fas fa-check-circle"></i>
-            <i class="fas fa-exclamation-circle"></i>
-            <small>Error message</small>
-		</div>
-		
-        <label for="yearLevel"><b>YEAR LEVEL</b></label>
-            <select name="yearLevel" id="yearLevel">
-				<option value="" disabled selected>Select Year:</option>
-                <option value="1st">1st</option>
-                <option value="2nd">2nd</option>
-                <option value="3rd">3rd</option>
-                <option value="5th">5th</option>
-            </select>
-        
-        <label for="userBirthday"><b>BIRTHDAY</b></label>
-            <input type="date" placeholder="Birthday" name="userBirthday" id="userBirthday" min="1961-01-01" max="2002-10-5" required>
-        
-        <label for="mobileNumber"><b>MOBILE NUMBER</b></label>
-            <input type="tel" pattern="[+63]{3} [0-9]{10}" value='+63 ' maxlength="14" name="mobileNumber" id="mobileNumber"   required>
-        
-        <label for="emailAddress"><b>EMAIL ADDRESS</b></label>
-            <input type="email" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress" id="emailAddress" required>
-    
-    </div>
     
     <div class="containerTwo">
-        
-        <label for="userName"><b>USERNAME</b></label>
-            <input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" id="userName" maxlength="15" minlength="8" required>
-    
-      <label for="userPassword"><b>PASSWORD</b></label>
-            <input type="password" placeholder="Password" name="userPassword" id="userPassword"  maxlength="20" minlength="8"required>
-    
+        <div class="form-control">
+			<label for="userName"><b>USERNAME</b></label>
+				<input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" maxlength="15" id="userName" >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+		</div>
+		
+		<div class="form-control">
+			<label for="userPassword"><b>PASSWORD</b></label>
+				<input type="password" placeholder="Password" name="userPassword" maxlength="20" id="userPassword"  >
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+		</div>
+		
        <label for="userRepeatPassword"><b>PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
         
