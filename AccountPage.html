@@ -12,7 +12,7 @@
 
     <h1><b>CREATE AN ACCOUNT</b></h1>
     
-    <form id="createform" action="accountPage.php" method="POST">
+    <form name="form" id="createform" action="accountPage.php" method="POST">
 		<div class="containerOne">
 		
 			<div class="form-control">
@@ -60,10 +60,15 @@
 					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>
 			</div>
-				
-			<label for="userBirthday"><b>BIRTHDAY</b></label>
-				<input type="date" min="1961-01-01" max="2002-10-3" placeholder="Birthday" name="userBirthday" id="userBirthday" required>
-		
+			
+			<div class="form-control">
+				<label for="userBirthday"><b>BIRTHDAY</b></label>
+					<input type="date" min="1961-01-01" max="2002-10-4" placeholder="Birthday" name="userBirthday" id="userBirthday" >
+					<i class="fas fa-check-circle"></i>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+			</div>
+			
 			<div class="form-control">
 				<label for="mobileNumber"><b>MOBILE NUMBER</b></label>
 					<input type="tel"   maxlength="14" name="mobileNumber" value="+63 " id="mobileNumber" >
@@ -101,7 +106,14 @@
 		
        <label for="userRepeatPassword"><b>PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
-        
+       
+		<div class="form-control">
+			<input  class="checkboxpass" type="checkbox" name="box" id="box" >
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
+		
         <button name="loginButton" id="loginButton" onclick="return validate()"> <b>SUBMIT</b>
         </button>
         
