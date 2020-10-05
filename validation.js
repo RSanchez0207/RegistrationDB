@@ -20,11 +20,12 @@ function validate() {
 	
 	var letters = /[.!#@%&'*+/=?()^-_`{|}~A-Za-z]/g;
 	var numbers = /[0-9.!#@%&'*+/=?()^-_`{|}~]/g;
+	var passwordFormat = /[.!#@%&'*+/=?()^-_`{|}~]/g;
 	var emailFormat =  /[.a-zA-Z]+@ue.edu.ph/g;
 	//var emailWrong = /[.!#@%&'*_-+/=?()^`{|}~] + @[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~]/g;
 	var tel = /[.!#@%&'*/=?()^-_`{|}~A-Za-z]/g;
-	var userFormat = /[A-Za-z_-]/g;
-	var wrongFormat = /[0-9.!#@%&'-_*+/=?()^`{|}~]/g;
+	var userFormat = /[-_A-Za-z]/g;
+	var wrongFormat = /[!#@%&'*+/=?()^`{|}~0-9.]/g;
 	
 	//replacing "-" in date
 	var newUserBirthday = userBirthdayInput.replace(/-/,"");
@@ -200,7 +201,7 @@ function validate() {
 		}
 		
 		//password
-		if(userPasswordInput.match(numbers)){
+		if(userPasswordInput.match(passwordFormat)){
 			setErrorFor(userPassword, "Please enter Alphabet Characters ");
 			return false;
 		}
