@@ -4,11 +4,36 @@
     <link rel = "stylesheet" href = "AccountPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans&display=swap" rel="stylesheet">
 	<script src="validation.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 
 
 <body>
     
+    <script>
+        function myFunction() {
+            var x = document.getElementById("userPassword");
+            if (x.type === "password") {
+                x.type = "text";
+            } 
+            else {
+                x.type = "password";
+            }
+        }
+    </script>
+    
+    <script>
+        function viewRepeatPassword() {
+            var y = document.getElementById("userRepeatPassword");
+            if (y.type === "password") {
+                y.type = "text";
+            } 
+            else {
+                y.type = "password";
+            }
+        }
+    </script>
+
     <form name="form" id="createform" action="accountPage.php" method="POST">
             
 		<div class="containerOne">
@@ -104,40 +129,36 @@
     
     <div class="containerTwo">
         <div class="form-control">
-			<label for="userName"><b>USERNAME</b></label>
+			<label style="margin-top: 131px;" for="userName"><b>USERNAME</b></label>
 				<input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" maxlength="15" id="userName" >
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
 		</div>
 		
+        
 		<div class="form-control">
 			<label for="userPassword"><b>PASSWORD</b></label>
 				<input type="password" placeholder="Password" name="userPassword" maxlength="20" id="userPassword"  >
+                <i class="far fa-eye" id="togglePassword"></i>
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
+              
 		</div>
 		
        <label for="userRepeatPassword"><b>CONFIRM PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
-       
-		<div class="form-control">
-			<input  class="checkboxpass" type="checkbox" name="box" id="box" >
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		
+        
+        <input type="checkbox" name="agreeCheck" id="agreeCheck" required>
+        <a href="">I agree to the <b>Terms and Conditions</b> of this website</a>
+            
         <button name="loginButton" id="loginButton" onclick="return validate()"> <b>SUBMIT</b>
         </button>
         
     
     </div>
 	</form>
-
-
-
 
 
 </body>
