@@ -15,6 +15,7 @@ h1{
 label{
     display: block;
     margin-bottom: 8px;
+    margin-top: 15px;
     font-size: 20px;
 
 }
@@ -22,7 +23,7 @@ label{
 input{
     width: 90%;
     padding: 13px;
-    background-color: lightskyblue;
+    background-color: #FFFDE4;
     margin-bottom: 30px;
     font-size: 20px;
     border-left: none;
@@ -45,8 +46,9 @@ button{
     margin: auto;
     margin-bottom: 50px;
     margin-top: 20px;
-    background-color: palegreen;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
     color: black;
+    border: solid 0.9px black;
 }
 
 a{
@@ -82,5 +84,5 @@ div.container{
     height: 20px;
     position: absolute;
     right: 760px;
-    top: 496px;
+    top: 525px;
 }
