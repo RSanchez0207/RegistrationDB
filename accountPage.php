@@ -18,7 +18,7 @@ if($userPassword == $userRepeatPassword){
 	,$studentNumber,$yearLevel,$userBirthday
 	,$mobileNumber,$emailAddress,$userName
 	,$userPassword);
-	//header("Location:HomePage.html");
+	//
 }else{
 	echo '<script>
 			alert("Password Mismatch");
@@ -33,8 +33,8 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 	try{
 		require 'Database.php';
 		
-		$sql =  "INSERT INTO usertable (Last Name, First Name, Middle Initial, Student Number
-		, Year Level, Birth Date, Mobile Number, UE Email Address, Username, Password) VALUES (?,?,?,?,?,?,?,?,?,?)";
+		$sql =  "INSERT INTO usertable (lastName, firstName, middleInitial, studentNumber
+		, yearLevel, birthDate, mobileNumber, ueEmailAddress, username, password) VALUES (?,?,?,?,?,?,?,?,?,?)";
 		
 		// no data returned
 		$conn->prepare($sql)->execute([$lastName,$firstName,$middleInitial
@@ -42,9 +42,7 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 	,$mobileNumber,$emailAddress,$userName
 	,$userPassword]);
 		
-		echo '<script>
-					alert ("Congrats")
-					</script>';
+		header("Location:HomePage.html");
 	} catch (PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();
 	}
