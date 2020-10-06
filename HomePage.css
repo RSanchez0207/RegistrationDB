@@ -1,54 +1,86 @@
 body{
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 79vh;
+    background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
 }
 
 h1{
     text-align: center;
-    margin-top: 10%;
+    margin-top: 240px;
+    color: black;
+    text-shadow: -0.8px -0.8px 0 #fff, 0.8px -0.8px 0 #fff, -0.8px 0.8px 0 #fff, 0.8px 0.8px 0 #fff;
+    font-size: 50px;
 }
 
 label{
     display: block;
     margin-bottom: 8px;
+    font-size: 20px;
+
 }
 
 input{
     width: 90%;
     padding: 13px;
-    border-radius: 10px;
-    border: solid 2px black;
+    background-color: lightskyblue;
     margin-bottom: 30px;
+    font-size: 20px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+   
+}
+
+input[type="text"], input[type="password"], textarea, select { 
+    outline: none;
 }
 
 button{
-    font-size: 15px;
-    width: 97%;
-    padding: 10px;
-    border-radius: 10px;
-    border: solid 2px black;
-    background-color: lightgreen;
-    color: #222222;
-    margin-bottom: 20px;
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    width: 97.5%;
+    padding: 15px;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    background-color: palegreen;
+    color: black;
 }
 
 a{
-    margin-left: 150px;
+    
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    margin-left: 108px;
+   
 }
 
-.container{
+h5{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    display: inherit;
+}
+
+div.container{
     width: 450px;
     height: 400px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    padding: 16px;
+    background-color:aliceblue;
+    border-radius: 5px;
+    padding: 18px;
     margin: auto;
 
 }
+
+
 
 #viewPassword{
     width: 20px;
     height: 20px;
     position: absolute;
-    right: 770px;
-    top: 406px;
+    right: 760px;
+    top: 496px;
 }
