@@ -2,8 +2,7 @@
 
 <head>
     <link rel = "stylesheet" href = "AccountPage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans&display=swap" rel="stylesheet">
 	<script src="validation.js"></script>
 </head>
 
@@ -13,31 +12,43 @@
     <h1><b>CREATE AN ACCOUNT</b></h1>
     
     <form name="form" id="createform" action="accountPage.php" method="POST">
+            
 		<div class="containerOne">
 		
 			<div class="form-control">
+                
 				<label for="lastName"><b>LAST NAME</b></label>
 				<input type="text" placeholder="Last Name" name="lastName" id="lastName" >
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
+                
 			</div>
+            
+     
+	
+                <div class="form-control">
+                 
+                    <label for="firstName"><b>FIRST NAME</b></label>
+				    <input type="text" placeholder="First Name" name="firstName" id="firstName" >
+				    <i class="fas fa-check-circle"></i>
+				    <i class="fas fa-exclamation-circle"></i>
+				    <small>Error message</small>
+                 
+                </div>
 			
-			<div class="form-control">
-			<label for="firstName"><b>FIRST NAME</b></label>
-				<input type="text" placeholder="First Name" name="firstName" id="firstName" >
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
-			</div>
-			
-			<div class="form-control">
-			<label for="middleInitial"><b>M.I.</b></label>
-				<input type="text" placeholder="M.I." name="middleInitial" id="middleInitial"  >
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
-			</div>
+                <div class="form-control">
+                
+                    <label for="middleInitial"><b>M.I.</b></label>
+				    <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial"  >
+				    <i class="fas fa-check-circle"></i>
+				    <i class="fas fa-exclamation-circle"></i>
+				    <small>Error message</small>
+                
+                </div>
+                
+      
+            
 			
 			<div class="form-control">
 			<label for="studentNumber"><b>STUDENT NUMBER</b></label>
@@ -104,7 +115,7 @@
 				<small>Error message</small>
 		</div>
 		
-       <label for="userRepeatPassword"><b>PASSWORD</b></label>
+       <label for="userRepeatPassword"><b>CONFIRM PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
        
 		<div class="form-control">

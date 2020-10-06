@@ -1,7 +1,6 @@
-
 body{
     font-family: 'Josefin Sans', sans-serif;
-    height: 79vh;
+    height: 120vh;
     background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
 }
 }
@@ -18,12 +17,65 @@ label{
     margin-bottom: 8px;
 }
 
-input{
-    width: 90%;
+
+
+
+#lastName{
+    width: 95%;
     padding: 13px;
-    border-radius: 10px;
-    border: solid 2px black;
     margin-bottom: 15px;
+    font-size: 20px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    
+}
+
+#firstName{
+    width: 87%;
+    padding: 13px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    margin-right: 10px;
+    
+}
+
+#middleInitial{
+    width: 8%;
+    padding: 13px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+#studentNumber{
+    width: 95%;
+    padding: 13px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-left: none;
+    border-top: none;
+    border-right: none; 
+}
+
+#yearLevel{
+    width: 95%;
+    padding: 13px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-left: none;
+    border-top: none;
+    border-right: none; 
+}
+
+
+input[type="text"], input[type="password"], textarea, select { 
+    outline: none;
 }
 
 select{
@@ -35,34 +87,43 @@ select{
 }
 
 button{
-    font-size: 15px;
-    width: 97%;
-    padding: 10px;
-    border-radius: 10px;
-    border: solid 2px black;
-    color: #222222;
-    margin-bottom: 20px;
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    width: 97.5%;
+    padding: 15px;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: black;   
+    border: solid 0.9px black;
 }
 
-.containerOne{
-    width: 450px;
-    height: 400px;
-    background-color: #FFFFFF;
+div.containerOne{
+    width: 550px;
+    height: 850px;
     border-radius: 10px;
     padding: 16px;
-    margin-left: 90px;;
-
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
 }
 
-.containerTwo{
+div.containerTwo{
     width: 450px;
     height: 400px;
-    background-color: #FFFFFF;
     border-radius: 10px;
     padding: 16px;
     margin-left: 50%;
+    display: inline-block;
+    position: absolute;
 
 }
+
 
 .form {
 	padding: 30px 40px;	
