@@ -12,6 +12,11 @@ $userName = $_POST['userName'];
 $userPassword = $_POST['userPassword'];
 $userRepeatPassword = $_POST['userRepeatPassword'];
 
+//delete from database
+//DELETE FROM usertable WHERE middleInitial="d"
+
+
+
 //waiting for submit button
 if($userPassword == $userRepeatPassword){
 	insertData($lastName,$firstName,$middleInitial
@@ -36,13 +41,38 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 		$sql =  "INSERT INTO usertable (lastName, firstName, middleInitial, studentNumber
 		, yearLevel, birthDate, mobileNumber, ueEmailAddress, username, password) VALUES (?,?,?,?,?,?,?,?,?,?)";
 		
-		// no data returned
-		$conn->prepare($sql)->execute([$lastName,$firstName,$middleInitial
-	,$studentNumber,$yearLevel,$userBirthday
-	,$mobileNumber,$emailAddress,$userName
-	,$userPassword]);
 		
-		header("Location:HomePage.html");
+		//username database
+		$query = $conn->query('SELECT username FROM usertable WHERE username = username');
+			$query->bindParam('username', $userName);
+			$query->execute();
+			
+			$pattern = $query->fetch();
+				$userNameDb = $pattern['username'];
+				echo $userNameDb;
+				
+				if($userNameDb == $userName){
+					echo '<script>
+						alert("Username Already Exist");
+					 </script>';
+						
+						echo '<script>
+						window.history.go(-1);
+					 </script>';
+				}
+				else{
+					$conn->prepare($sql)->execute([$lastName,$firstName,$middleInitial
+						,$studentNumber,$yearLevel,$userBirthday
+						,$mobileNumber,$emailAddress,$userName
+						,$userPassword]);
+					
+					//header("Location:HomePage.html");
+				}
+			
+		
+		
+		
+			
 	} catch (PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();
 	}
