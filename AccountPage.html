@@ -4,29 +4,55 @@
     <link rel = "stylesheet" href = "AccountPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans&display=swap" rel="stylesheet">
 	<script src="validation.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 
 
 <body>
-
-    <h1><b>CREATE AN ACCOUNT</b></h1>
     
+    <script>
+        function myFunction() {
+            var x = document.getElementById("userPassword");
+            if (x.type === "password") {
+                x.type = "text";
+            } 
+            else {
+                x.type = "password";
+            }
+        }
+    </script>
+    
+    <script>
+        function viewRepeatPassword() {
+            var y = document.getElementById("userRepeatPassword");
+            if (y.type === "password") {
+                y.type = "text";
+            } 
+            else {
+                y.type = "password";
+            }
+        }
+    </script>
+
     <form name="form" id="createform" action="accountPage.php" method="POST">
             
 		<div class="containerOne">
+                     
+            <h1>Create an Account</h1>
+            <br>
 		
-			<div class="form-control">
+                <div class="form-control">
                 
-				<label for="lastName"><b>LAST NAME</b></label>
-				<input type="text" placeholder="Last Name" name="lastName" id="lastName" >
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
+				    <label for="lastName"><b>LAST NAME</b></label>
+				    <input type="text" placeholder="Last Name" name="lastName" id="lastName" >
+				    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 
-			</div>
+                </div>
             
      
-	
+	  
                 <div class="form-control">
                  
                     <label for="firstName"><b>FIRST NAME</b></label>
@@ -40,46 +66,48 @@
                 <div class="form-control">
                 
                     <label for="middleInitial"><b>M.I.</b></label>
-				    <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial"  >
+				    <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial" maxlength="2" >
 				    <i class="fas fa-check-circle"></i>
 				    <i class="fas fa-exclamation-circle"></i>
 				    <small>Error message</small>
                 
                 </div>
                 
-      
-            
+                <div class="form-control">
+                
+                    <label for="studentNumber"><b>STUDENT NUMBER</b></label>
+				    <input type="text" placeholder="Student Number" name="studentNumber" maxlength="11" id="studentNumber"  >
+				    <i class="fas fa-check-circle"></i>
+				    <i class="fas fa-exclamation-circle"></i>
+				    <small>Error message</small>
+                
+                </div>
 			
-			<div class="form-control">
-			<label for="studentNumber"><b>STUDENT NUMBER</b></label>
-				<input type="text" placeholder="Student Number" name="studentNumber" maxlength="11" id="studentNumber"  >
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
-			</div>
+			    <div class="form-control">
+                
+				    <label for="yearLevel"><b>YEAR LEVEL</b></label>
+					   <select name="yearLevel" id="yearLevel" >
+						  <option value="" disabled selected>Select Year:</option>
+						  <option value="1st">1st</option>
+						  <option value="2nd">2nd</option>
+						  <option value="3rd">3rd</option>
+						  <option value="5th">5th</option>
+					   </select>
+					   <i class="fas fa-check-circle"></i>
+					   <i class="fas fa-exclamation-circle"></i>
+					   <small>Error message</small>
+			    </div>
 			
-			<div class="form-control">
-				<label for="yearLevel"><b>YEAR LEVEL</b></label>
-					<select name="yearLevel" id="yearLevel" >
-						<option value="" disabled selected>Select Year:</option>
-						<option value="1st">1st</option>
-						<option value="2nd">2nd</option>
-						<option value="3rd">3rd</option>
-						<option value="5th">5th</option>
-					</select>
-					<i class="fas fa-check-circle"></i>
-					<i class="fas fa-exclamation-circle"></i>
-					<small>Error message</small>
-			</div>
+                <div class="form-control">
+                
+				    <label for="userBirthday"><b>BIRTHDAY</b></label>
+					   <input type="date" min="1961-01-01" max="2002-10-4" placeholder="Birthday" name="userBirthday" id="userBirthday" >
+					   <i class="fas fa-check-circle"></i>
+					   <i class="fas fa-exclamation-circle"></i>
+					   <small>Error message</small>
+                </div>
 			
-			<div class="form-control">
-				<label for="userBirthday"><b>BIRTHDAY</b></label>
-					<input type="date" min="1961-01-01" max="2002-10-4" placeholder="Birthday" name="userBirthday" id="userBirthday" >
-					<i class="fas fa-check-circle"></i>
-					<i class="fas fa-exclamation-circle"></i>
-					<small>Error message</small>
-			</div>
-			
+<<<<<<< HEAD
 			<div class="form-control">
 				<label for="mobileNumber"><b>MOBILE NUMBER</b></label>
 					<input type="tel"   maxlength="10" name="mobileNumber"  id="mobileNumber" >
@@ -87,53 +115,60 @@
 					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>
 			</div>
+=======
+                <div class="form-control">
+                
+				    <label for="mobileNumber"><b>MOBILE NUMBER</b></label>
+					   <input type="tel"   maxlength="14" name="mobileNumber" value="+63 " id="mobileNumber" >
+					   <i class="fas fa-check-circle"></i>
+					   <i class="fas fa-exclamation-circle"></i>
+					   <small>Error message</small>
+                </div>
+>>>>>>> 689cf4b04b18df4e9e07b250d14f8af4eb59c36b
 			
-			<div class="form-control">
-			<label for="emailAddress"><b>EMAIL ADDRESS</b></label>
-				<input type="text" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress"  id="emailAddress" >
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
-			</div>
+                <div class="form-control">
+                
+			         <label for="emailAddress"><b>EMAIL ADDRESS</b></label>
+				        <input type="text" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress"  id="emailAddress" >
+				        <i class="fas fa-check-circle"></i>
+				        <i class="fas fa-exclamation-circle"></i>
+				        <small>Error message</small>
+                </div>
 		
 		</div>
     
     <div class="containerTwo">
         <div class="form-control">
-			<label for="userName"><b>USERNAME</b></label>
+			<label style="margin-top: 131px;" for="userName"><b>USERNAME</b></label>
 				<input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" maxlength="15" id="userName" >
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
 		</div>
 		
+        
 		<div class="form-control">
 			<label for="userPassword"><b>PASSWORD</b></label>
 				<input type="password" placeholder="Password" name="userPassword" maxlength="20" id="userPassword"  >
+                <i class="far fa-eye" id="togglePassword"></i>
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
+              
 		</div>
 		
        <label for="userRepeatPassword"><b>CONFIRM PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
-       
-		<div class="form-control">
-			<input  class="checkboxpass" type="checkbox" name="box" id="box" >
-			<i class="fas fa-check-circle"></i>
-			<i class="fas fa-exclamation-circle"></i>
-			<small>Error message</small>
-		</div>
-		
+        
+        <input type="checkbox" name="agreeCheck" id="agreeCheck" required>
+        <a href="">I agree to the <b>Terms and Conditions</b> of this website</a>
+            
         <button name="loginButton" id="loginButton" onclick="return validate()"> <b>SUBMIT</b>
         </button>
         
     
     </div>
 	</form>
-
-
-
 
 
 </body>

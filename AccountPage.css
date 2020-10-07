@@ -1,77 +1,62 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
-    height: 120vh;
+    height: 100vh;
     background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
 }
-}
-
 
 h1{
-    display: block;
-    text-align: center;
     font-size: 50px;
+    text-shadow: -0.8px -0.8px 0 #fff, 0.8px -0.8px 0 #fff, -0.8px 0.8px 0 #fff, 0.8px 0.8px 0 #fff;
+    margin-left: 25px;
 }
+
 
 label{
     display: block;
     margin-bottom: 8px;
+    font-size: 15px;
 }
 
 
-
-
-#lastName{
+#lastName, #studentNumber, #userBirthday, #mobileNumber, #emailAddress{
     width: 95%;
     padding: 13px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    
+    margin-bottom: 1px;
+    font-size: 15px;
+    border: solid 0.8px black;
+    border-radius: 12px;
 }
 
 #firstName{
-    width: 87%;
+    width: 95%;
     padding: 13px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
+    margin-bottom: 1px;
+    font-size: 15px;
+    border: solid 0.8px black;
+    border-radius: 12px;
     margin-right: 10px;
+    
     
 }
 
 #middleInitial{
-    width: 8%;
+    width: 5%;
     padding: 13px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-}
-
-#studentNumber{
-    width: 95%;
-    padding: 13px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    border-left: none;
-    border-top: none;
-    border-right: none; 
+    margin-bottom: 1px;
+    font-size: 15px;
+    border: solid 0.8px black;
+    border-radius: 12px;
 }
 
 #yearLevel{
-    width: 95%;
+    width: 100%;
     padding: 13px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    border-left: none;
-    border-top: none;
-    border-right: none; 
+    margin-bottom: 1px;
+    font-size: 15px;
+    border: solid 0.8px black;
+    border-radius: 12px;
 }
+
 
 
 input[type="text"], input[type="password"], textarea, select { 
@@ -102,28 +87,52 @@ button{
 }
 
 div.containerOne{
-    width: 550px;
-    height: 850px;
+    width: 800px;
+    height: 900px;
     border-radius: 10px;
     padding: 16px;
-    margin-left: 90px;
+    margin-left: 12%;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    float: left;
     background: white;
 }
 
 div.containerTwo{
-    width: 450px;
-    height: 400px;
+    width: 550px;
+    height: 900px;
     border-radius: 10px;
     padding: 16px;
-    margin-left: 50%;
     display: inline-block;
     position: absolute;
+    background: white;
+    float: right;
 
 }
 
+
+#userName, #userPassword, #userRepeatPassword{
+    border: solid 0.8px black;
+    border-radius: 12px;
+    width: 95%;
+    padding: 13px;
+    margin-bottom: 1px;
+    font-size: 15px;
+}
+
+#agreeCheck{
+    width: 20px;
+    height: 20px;
+    margin-top: 18px;
+}
+
+a{
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
 
 .form {
 	padding: 30px 40px;	
@@ -389,4 +398,3 @@ div.containerTwo{
 		right: 10px;
 	}
 }
-
