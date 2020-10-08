@@ -43,10 +43,10 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 		
 		
 		//username database
-		 $stmt = $conn->prepare("SELECT count(*) as cntUser FROM usertable WHERE username=:username");
-		   $stmt->bindValue(':username', $userName, PDO::PARAM_STR);
-		   $stmt->execute(); 
-		   $count = $stmt->fetchColumn();
+		 $userNameDb = $conn->prepare("SELECT count(*) as cntUser FROM usertable WHERE username=:username");
+		   $userNameDb->bindValue(':username', $userName, PDO::PARAM_STR);
+		   $userNameDb->execute(); 
+		   $count = $userNameDb->fetchColumn();
 
 				if($count > 0){
 					echo '<script>
