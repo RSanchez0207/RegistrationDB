@@ -57,13 +57,12 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 						window.history.go(-1);
 					 </script>';
 				}else{
-					echo "hi";
 					$conn->prepare($sql)->execute([$lastName,$firstName,$middleInitial
 						,$studentNumber,$yearLevel,$userBirthday
 						,$mobileNumber,$emailAddress,$userName
 						,$userPassword]);
 					
-					//header("Location:HomePage.html");
+					header("Location:HomePage.html");
 				}
 			
 	} catch (PDOException $e) {
