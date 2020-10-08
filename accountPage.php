@@ -23,7 +23,6 @@ if($userPassword == $userRepeatPassword){
 	,$studentNumber,$yearLevel,$userBirthday
 	,$mobileNumber,$emailAddress,$userName
 	,$userPassword);
-	//
 }else{
 	echo '<script>
 			alert("Password Mismatch");
@@ -47,7 +46,8 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 		   $userNameDb->bindValue(':username', $userName, PDO::PARAM_STR);
 		   $userNameDb->execute(); 
 		   $count = $userNameDb->fetchColumn();
-
+				
+				// check if username exist
 				if($count > 0){
 					echo '<script>
 						alert("Username Already Exist");
@@ -57,11 +57,11 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 						window.history.go(-1);
 					 </script>';
 				}else{
+					// insert of data to database
 					$conn->prepare($sql)->execute([$lastName,$firstName,$middleInitial
 						,$studentNumber,$yearLevel,$userBirthday
 						,$mobileNumber,$emailAddress,$userName
 						,$userPassword]);
-					
 					header("Location:HomePage.html");
 				}
 			
