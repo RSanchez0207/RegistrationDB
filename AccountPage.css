@@ -84,7 +84,7 @@ select{
 
 #yearLevel{
     width: 133px;
-    padding: 16px;
+    padding: 15.5px;
     margin-bottom: 1px;
     font-size: 15px;
     border: solid 0.8px black;
@@ -118,15 +118,14 @@ button{
     display: block;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
-    width: 97.5%;
+    width: 395px;
     padding: 15px;
     border-radius: 15px;
     margin: auto;
-    margin-bottom: 50px;
-    margin-top: 20px;
     background: linear-gradient(to right, #74ebd5, #acb6e5);
     color: black;   
     border: solid 0.9px black;
+    margin-top: 90px;   
 }
 
 button:hover {
@@ -138,8 +137,9 @@ div.containerOne{
     height: 90%;
     border-radius: 10px;
     padding: 16px;
-    margin-left: 21%;
+    margin-left: 24.2%;
     margin-right: 10px;
+    margin-top: 4%;
     display: flex;
     flex-direction: column;
     float: left;
@@ -147,15 +147,15 @@ div.containerOne{
 }
 
 div.containerTwo{
-    width: 30%;
-    height: 93%;
+    width: 25%;
+    height: 73.5%;
     border-radius: 10px;
     padding: 16px;
     display: inline-block;
     position: absolute;
     background: white;
     float: right;
-
+    margin-top: 4%;
 }
 
 div.row{
@@ -164,13 +164,25 @@ div.row{
 }
 
 
-#userName, #userPassword, #userRepeatPassword{
+#userName, #userPassword{
     border: solid 0.8px black;
     border-radius: 12px;
-    width: 95%;
+    width: 366px;
     padding: 13px;
     margin-bottom: 1px;
     font-size: 15px;
+    display: block;
+}
+
+#userRepeatPassword{
+    border: solid 0.8px black;
+    border-radius: 12px;
+    width: 366px;
+    padding: 13px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 #agreeCheck{
@@ -182,7 +194,7 @@ div.row{
 a{
     font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1em;
     color: black;
 }
 
@@ -275,6 +287,7 @@ a{
 
 .form-control.error small {
 	visibility: visible;
+    margin-left: 39px;
 }
 
 .form button {

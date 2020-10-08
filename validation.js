@@ -35,7 +35,7 @@ function validate() {
 	
 		//lastname
 		if(lastNameInput.match(numbers) ){
-			setErrorFor(lastName, "Numeric characters or Special Characters are not allowed");
+			setErrorFor(lastName, "Only Alphabet Characters are Allowed");
 			return false;	
 		}
 		else{
@@ -53,7 +53,7 @@ function validate() {
 		
 		//firstname
 		if(firstNameInput.match(numbers)){
-			setErrorFor(firstName, "Numeric characters or Special Characters are not allowed");
+			setErrorFor(firstName, "Only Alphabet Characters are Allowed");
 			return false;
 		}
 		else{
@@ -104,7 +104,7 @@ function validate() {
 		}
 		
 		if(studentNumberInput.length < 11){
-			setErrorFor(studentNumber, "Must Contain At Least 11 Numeric Characters");
+			setErrorFor(studentNumber, "Invalid Student Number");
 			return false;	
 		}
 		else{
