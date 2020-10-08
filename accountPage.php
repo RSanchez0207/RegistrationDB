@@ -43,15 +43,12 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 		
 		
 		//username database
-		$query = $conn->query('SELECT username FROM usertable WHERE username = username');
-			$query->bindParam('username', $userName);
-			$query->execute();
-			
-			$pattern = $query->fetch();
-				$userNameDb = $pattern['username'];
-				echo $userNameDb;
-				
-				if($userNameDb == $userName){
+		 $stmt = $conn->prepare("SELECT count(*) as cntUser FROM usertable WHERE username=:username");
+		   $stmt->bindValue(':username', $userName, PDO::PARAM_STR);
+		   $stmt->execute(); 
+		   $count = $stmt->fetchColumn();
+
+				if($count > 0){
 					echo '<script>
 						alert("Username Already Exist");
 					 </script>';
@@ -59,8 +56,8 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 						echo '<script>
 						window.history.go(-1);
 					 </script>';
-				}
-				else{
+				}else{
+					echo "hi";
 					$conn->prepare($sql)->execute([$lastName,$firstName,$middleInitial
 						,$studentNumber,$yearLevel,$userBirthday
 						,$mobileNumber,$emailAddress,$userName
@@ -68,10 +65,6 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 					
 					//header("Location:HomePage.html");
 				}
-			
-		
-		
-		
 			
 	} catch (PDOException $e) {
 		echo $sql . "<br>" . $e->getMessage();
