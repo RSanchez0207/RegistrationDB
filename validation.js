@@ -35,7 +35,7 @@ function validate() {
 	
 		//lastname
 		if(lastNameInput.match(numbers) ){
-			setErrorFor(lastName, "Please enter Alphabet Characters ");
+			setErrorFor(lastName, "Numeric characters or Special Characters are not allowed");
 			return false;	
 		}
 		else{
@@ -43,7 +43,7 @@ function validate() {
 		}
 		
 		if(lastNameInput == ""){
-			setErrorFor(lastName, "Please fill out this field  ");
+			setErrorFor(lastName, "This Field is Required");
 			return false;	
 		}
 		else{
@@ -53,7 +53,7 @@ function validate() {
 		
 		//firstname
 		if(firstNameInput.match(numbers)){
-			setErrorFor(firstName, "Please enter Alphabet Characters ");
+			setErrorFor(firstName, "Numeric characters or Special Characters are not allowed");
 			return false;
 		}
 		else{
@@ -61,7 +61,7 @@ function validate() {
 		}
 		
 		if(firstNameInput == ""){
-			setErrorFor(firstName, "Please fill out this field  ");
+			setErrorFor(firstName, "This Field is Required");
 			return false;	
 		}
 		else{
@@ -88,7 +88,7 @@ function validate() {
 		
 		//student numbers
 		if(studentNumberInput.match(letters)){
-			setErrorFor(studentNumber, "Please enter Numeric Characters ");
+			setErrorFor(studentNumber, "Invalid Student Number");
 			return false;
 		}
 		else{
@@ -96,7 +96,7 @@ function validate() {
 		}
 		
 		if(studentNumberInput == ""){
-			setErrorFor(studentNumber, "Please fill out this field  ");
+			setErrorFor(studentNumber, "This Field is Required");
 			return false;	
 		}
 		else{
@@ -104,7 +104,7 @@ function validate() {
 		}
 		
 		if(studentNumberInput.length < 11){
-			setErrorFor(studentNumber, "Must contain at least 11 characters");
+			setErrorFor(studentNumber, "Must Contain At Least 11 Numeric Characters");
 			return false;	
 		}
 		else{
@@ -113,7 +113,7 @@ function validate() {
 		
 		//yearLevel
 		if(yearLevelInput == ""){
-			setErrorFor(yearLevel, "Please select an item in the list");
+			setErrorFor(yearLevel, "This Field is Required");
 			return false;
 		}
 		else{
@@ -122,7 +122,7 @@ function validate() {
 		
 		//birthday
 		if(userBirthdayInput == ""){
-			setErrorFor(userBirthday, "Please fill out this field");
+			setErrorFor(userBirthday, "This Field is Required");
 			return false;
 		}
 		else{
@@ -132,7 +132,7 @@ function validate() {
 		}
 		// validation of age
 		if(newUserBirthday > "20021004" ){
-			setErrorFor(userBirthday, "Ages 18 and above only")
+			setErrorFor(userBirthday, "Ages 18 And Above Only")
 			return false;
 		}
 		else{
@@ -143,14 +143,14 @@ function validate() {
 		
 		//mobile number
 		if(mobileNumberInput.match(tel)){
-			setErrorFor(mobileNumber, "Please follow the format: +63 XXXXXXXXX");
+			setErrorFor(mobileNumber, "This Field Is Required");
 			return false;
 		}
 		else{
 			setSuccessFor(mobileNumber);
 		}
 		if(mobileNumberInput.length != 10){
-			setErrorFor(mobileNumber, "Please follow the format: +63 XXXXXXXXX");
+			setErrorFor(mobileNumber, "Wrong Format");
 			return false;	
 		}
 		else{
@@ -159,7 +159,7 @@ function validate() {
 		
 		//email
 		if(emailInput == ""){
-			setErrorFor(emailAddress, "Please fill out this field  ");
+			setErrorFor(emailAddress, "This Field is Required");
 			return false;	
 		}
 		else{
@@ -169,7 +169,7 @@ function validate() {
 		//email2
 		if(emailFormat.test(emailInput)){
 			if(emailFormatTwo.test(emailInput) == false){
-				setErrorFor(emailAddress, "Please enter proper email ");
+				setErrorFor(emailAddress, "Invalid UE Email Address");
 			}
 			else{
 				setSuccessFor(emailAddress);
@@ -177,13 +177,13 @@ function validate() {
 			}
 		}
 		else{
-			setErrorFor(emailAddress, "Please enter proper email ");
+			setErrorFor(emailAddress, "Invalid UE Email Address");
 		}
 		
 		
 		//username
 		if(userNameInput == ""){
-			setErrorFor(userName, "Please fill out this field  ");
+			setErrorFor(userName, "This Field is Required");
 			return false;	
 		}
 		else{
@@ -191,7 +191,7 @@ function validate() {
 		}
 		//userName2
 		if(userNameInput.match(wrongFormat)){
-			setErrorFor(userName, "Please enter proper username ");
+			setErrorFor(userName, "Only Accepts Alphabets, Dash (-), Or Underscore (_)");
 			return false;
 		}
 		else{
@@ -199,7 +199,7 @@ function validate() {
 		}
 		
 		if(userNameInput.length < 8){
-			setErrorFor(userName, "Must contain at least 8 or more characters");
+			setErrorFor(userName, "Must Contain At Least 8-15 Characters");
 			return false;	
 		}
 		else{
@@ -208,7 +208,7 @@ function validate() {
 		
 		//password
 		if(userPasswordInput.match(passwordFormat)){
-			setErrorFor(userPassword, "Please enter Alphabet Characters ");
+			setErrorFor(userPassword, "Please Enter Alphanumeric Characters ");
 			return false;
 		}
 		else{
@@ -216,7 +216,7 @@ function validate() {
 		}
 		
 		if(userPasswordInput == ""){
-			setErrorFor(userPassword, "Please fill out this field  ");
+			setErrorFor(userPassword, "This Field is Required");
 			return false;	
 		}
 		else{
@@ -224,7 +224,7 @@ function validate() {
 		}
 		
 		if(userPasswordInput.length < 8 ){
-			setErrorFor(userPassword, "Must contain at least 8 or more characters");
+			setErrorFor(userPassword, "Must Contain At Least 8-15 Alphanumeric Characters");
 			return false;	
 		}
 		else{

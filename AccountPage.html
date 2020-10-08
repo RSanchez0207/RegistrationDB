@@ -44,7 +44,7 @@
                 <div class="form-control">
                 
 				    <label for="lastName"><b>LAST NAME</b></label>
-				    <input type="text" placeholder="Last Name" name="lastName" id="lastName" >
+				    <input type="text" placeholder="Last Name" name="lastName" id="lastName" autocomplete="off">
 				    <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
@@ -52,11 +52,11 @@
                 </div>
             
      
-	  
+	   <div class="row">
                 <div class="form-control">
                  
-                    <label for="firstName"><b>FIRST NAME</b></label>
-				    <input type="text" placeholder="First Name" name="firstName" id="firstName" >
+                    <label class="fName" for="firstName"><b>FIRST NAME</b></label>
+				    <input type="text" placeholder="First Name" name="firstName" id="firstName" autocomplete="off">
 				    <i class="fas fa-check-circle"></i>
 				    <i class="fas fa-exclamation-circle"></i>
 				    <small>Error message</small>
@@ -65,29 +65,32 @@
 			
                 <div class="form-control">
                 
-                    <label for="middleInitial"><b>M.I.</b></label>
-				    <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial" maxlength="2" >
+                    <label class="mInitial" for="middleInitial"><b>M. I.</b></label>
+				    <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial" maxlength="2" autocomplete="off">
 				    <i class="fas fa-check-circle"></i>
 				    <i class="fas fa-exclamation-circle"></i>
 				    <small>Error message</small>
                 
                 </div>
+        </div> 
                 
                 <div class="form-control">
                 
                     <label for="studentNumber"><b>STUDENT NUMBER</b></label>
-				    <input type="text" placeholder="Student Number" name="studentNumber" maxlength="11" id="studentNumber"  >
+				    <input type="text" placeholder="Student Number" name="studentNumber" maxlength="11" id="studentNumber" autocomplete="off" >
 				    <i class="fas fa-check-circle"></i>
 				    <i class="fas fa-exclamation-circle"></i>
 				    <small>Error message</small>
                 
                 </div>
-			
-			    <div class="form-control">
+            
+        <div class="row">
                 
-				    <label for="yearLevel"><b>YEAR LEVEL</b></label>
+			    <div class="form-control">
+        
+				    <label for="yearLevel" class="yLevel"><b>YEAR LEVEL</b></label>
 					   <select name="yearLevel" id="yearLevel" >
-						  <option value="" disabled selected>Select Year:</option>
+                          <option value="none">Select Year:</option>
 						  <option value="1st">1st</option>
 						  <option value="2nd">2nd</option>
 						  <option value="3rd">3rd</option>
@@ -99,18 +102,18 @@
 			    </div>
 			
                 <div class="form-control">
-                
-				    <label for="userBirthday"><b>BIRTHDAY</b></label>
-					   <input type="date" min="1961-01-01" max="2002-10-4" placeholder="Birthday" name="userBirthday" id="userBirthday" >
+            
+				    <label class="uBirthday" for="userBirthday"><b>BIRTHDAY</b></label>
+					   <input type="date" min="1961-01-01" max="2002-10-4" placeholder="Birthday" name="userBirthday" id="userBirthday" autocomplete="off">
 					   <i class="fas fa-check-circle"></i>
 					   <i class="fas fa-exclamation-circle"></i>
 					   <small>Error message</small>
                 </div>
-			
+        </div>
 
 			<div class="form-control">
 				<label for="mobileNumber"><b>MOBILE NUMBER</b></label>
-					<input type="tel"   maxlength="10" name="mobileNumber"  id="mobileNumber" >
+					<input type="tel"   maxlength="10" name="mobileNumber"  id="mobileNumber" autocomplete="off" >
 					<i class="fas fa-check-circle"></i>
 					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>
@@ -119,7 +122,7 @@
             <div class="form-control">
                 
 			      <label for="emailAddress"><b>EMAIL ADDRESS</b></label>
-				    <input type="text" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress"  id="emailAddress" >
+				    <input type="text" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress"  id="emailAddress" autocomplete="off">
 				    <i class="fas fa-check-circle"></i>
 				    <i class="fas fa-exclamation-circle"></i>
 				     <small>Error message</small>
@@ -130,7 +133,7 @@
     <div class="containerTwo">
         <div class="form-control">
 			<label style="margin-top: 131px;" for="userName"><b>USERNAME</b></label>
-				<input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" maxlength="15" id="userName" >
+				<input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" maxlength="15" id="userName" autocomplete="off">
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
@@ -139,7 +142,7 @@
         
 		<div class="form-control">
 			<label for="userPassword"><b>PASSWORD</b></label>
-				<input type="password" placeholder="Password" name="userPassword" maxlength="20" id="userPassword"  >
+				<input type="password" placeholder="Password" name="userPassword" maxlength="20" id="userPassword" autocomplete="off" >
                 <i class="far fa-eye" id="togglePassword"></i>
 				<i class="fas fa-check-circle"></i>
 				<i class="fas fa-exclamation-circle"></i>
@@ -148,9 +151,10 @@
 		</div>
 		
        <label for="userRepeatPassword"><b>CONFIRM PASSWORD</b></label>
-            <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required>
+            <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required autocomplete="off">
         
         <input type="checkbox" name="agreeCheck" id="agreeCheck" required>
+        
         <a href="">I agree to the <b>Terms and Conditions</b> of this website</a>
             
         <button name="loginButton" id="loginButton" onclick="return validate()"> <b>SUBMIT</b>
