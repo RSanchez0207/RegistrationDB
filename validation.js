@@ -112,7 +112,7 @@ function validate() {
 		}
 		
 		//yearLevel
-		if(yearLevelInput == ""){
+		if(yearLevelInput == "none"){
 			setErrorFor(yearLevel, "This Field is Required");
 			return false;
 		}
