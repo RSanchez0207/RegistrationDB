@@ -199,6 +199,22 @@ a{
     color: black;
 }
 
+#checkBox{
+    position: absolute;
+    top: 32px;
+    right: 60px;
+    width: 15px;
+    height: 15px;
+}
+
+#checkBoxTwo{
+    position: absolute;
+    top: 375px;
+    right: 76px;
+    width: 15px;
+    height: 15px;
+}
+
 .form {
 	padding: 30px 40px;	
 }

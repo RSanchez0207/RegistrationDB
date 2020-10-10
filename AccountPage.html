@@ -33,6 +33,30 @@
             }
         }
     </script>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("userPassword");
+            if (x.type === "password") {
+                x.type = "text";
+            } 
+            else {
+                x.type = "password";
+            }
+        }
+    </script>
+    
+    <script>
+        function viewRepeatPassword() {
+            var y = document.getElementById("userRepeatPassword");
+            if (y.type === "password") {
+                y.type = "text";
+            } 
+            else {
+                y.type = "password";
+            }
+        }
+    </script>
 
     <form name="form" id="createform" action="accountPage.php" method="POST">
             
@@ -95,8 +119,8 @@
 						  <option value="3rd">3rd</option>
 						  <option value="5th">5th</option>
 					   </select>
-					   <i style="right: 16px" class="fas fa-check-circle"></i>
-					   <i style="right: 16px" class="fas fa-exclamation-circle"></i>
+					   <i style="right: 16px; top: 38px;" class="fas fa-check-circle"></i>
+					   <i style="right: 16px; top: 38px;" class="fas fa-exclamation-circle"></i>
 					   <small>Error message</small>
 			    </div>
 			
@@ -104,8 +128,8 @@
             
 				    <label class="uBirthday" for="userBirthday"><b>BIRTHDAY</b></label>
 					   <input type="date" min="1961-01-01" max="2002-10-4" placeholder="Birthday" name="userBirthday" id="userBirthday" autocomplete="off">
-					   <i style="right: 35px" style="top: 2px" class="fas fa-check-circle"></i>
-					   <i style="right: 35px" class="fas fa-exclamation-circle"></i>
+					   <i style="right: 35px; top: 38px;" class="fas fa-check-circle"></i>
+					   <i style="right: 35px; top: 38px;" class="fas fa-exclamation-circle"></i>
 					   <small>Error message</small>
                 </div>
         </div>
@@ -120,7 +144,7 @@
 
             <div class="form-control">
                 
-			      <label for="emailAddress"><b>EMAIL ADDRESS</b></label>
+			      <label for="emailAddress"><b>UE EMAIL ADDRESS</b></label>
 				    <input type="text" placeholder="ex. delacruz.juan@ue.edu.ph" name="emailAddress"  id="emailAddress" autocomplete="off">
 				    <i class="fas fa-check-circle"></i>
 				    <i class="fas fa-exclamation-circle"></i>
@@ -136,24 +160,24 @@
         <div class="form-control">
 			<label style="margin-top: 16px;" for="userName"><b>USERNAME</b></label>
 				<input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" maxlength="15" id="userName" autocomplete="off">
-				<i class="fas fa-check-circle" style="top: 48px;"></i>
-				<i class="fas fa-exclamation-circle" style="top: 48px;"></i>
+				<i class="fas fa-check-circle" style="top: 50px;"></i>
+				<i class="fas fa-exclamation-circle" style="top: 50px;"></i>
 				<small>Error message</small>
 		</div>
 		
         
 		<div class="form-control">
 			<label for="userPassword"><b>PASSWORD</b></label>
-				<input type="password" placeholder="Password" name="userPassword" maxlength="20" id="userPassword" autocomplete="off" >
-                <i class="far fa-eye" id="togglePassword"></i>
-				<i class="fas fa-check-circle" style="top: 48px;"></i>
-				<i class="fas fa-exclamation-circle" style="top: 48px;"></i>
+				<input type="password" placeholder="Password" name="userPassword" maxlength="20" id="userPassword" autocomplete="off">
+				<i class="fas fa-check-circle"></i>
+				<i class="fas fa-exclamation-circle"></i>
 				<small>Error message</small>
-              
+                <input type="checkbox" name=checkBox id=checkBox onClick="myFunction()">
 		</div>
 		
        <label for="userRepeatPassword"><b>CONFIRM PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword" required autocomplete="off">
+            <input type="checkbox" name=checkBoxTwo id=checkBoxTwo onClick="viewRepeatPassword()">
         
         <input type="checkbox" name="agreeCheck" id="agreeCheck" required>
         
