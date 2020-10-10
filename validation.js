@@ -17,11 +17,11 @@ function validate() {
 	var emailInput = document.getElementById("emailAddress").value;
 	var userNameInput = document.getElementById("userName").value;
 	var userPasswordInput = document.getElementById("userPassword").value;
+	var box = document.getElementById("agreeCheck").value;
 	
 	var letters = /[.!#@%&'*+/=?()^-_`{|}~A-Za-z]/g;
 	var numbers = /[0-9.!#@%&'*+/=?()^-_`{|}~]/g;
 	var passwordFormat = /[.!#@%&'*+/=?()^-_`{|}~]/g;
-	var passFormat = "/^(?=.*\d)(?=.*[a-zA-Z])$/";
 	var emailFormat =  /^([a-zA-Z@.]+)$/;
 	var emailFormatTwo = /@ue.edu.ph\s*$/;
 	//var emailWrong = /[.!#@%&'*_-+/=?()^`{|}~] + @[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~]/g;
@@ -216,8 +216,11 @@ function validate() {
 			setSuccessFor(userName);
 		}
 		
+		
+		
+		
 		//password	
-		if(passFormat.test(userPasswordInput) == false){
+		if(userPasswordInput.match(passwordFormat)){
 			setErrorFor(userPassword, "Please Enter Alphanumeric Characters ");
 			return false;
 		}
