@@ -179,8 +179,12 @@
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword"  autocomplete="off">
             <input type="checkbox" name=checkBoxTwo id=checkBoxTwo onClick="viewRepeatPassword()">
         
-        <input type="checkbox" name="agreeCheck" id="agreeCheck" >
-        
+		<div class="form-control">
+			<input type="checkbox" name="agreeCheck" id="agreeCheck" >
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i>
+			<small>Error message</small>
+		</div>
         <a href="">I agree to the <b>Terms and Conditions</b> of this website</a>
             
         <button name="loginButton" id="loginButton" onclick="return validate()"> <b>SUBMIT</b>

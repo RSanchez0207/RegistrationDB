@@ -143,8 +143,15 @@ function validate() {
 		
 		//mobile number
 		if(mobileNumberInput.match(tel)){
-			setErrorFor(mobileNumber, "This Field Is Required");
+			setErrorFor(mobileNumber, "Wrong Format");
 			return false;
+		}
+		else{
+			setSuccessFor(mobileNumber);
+		}
+		if(mobileNumberInput.length == 0){
+			setErrorFor(mobileNumber, "This Field Is Required");
+			return false;	
 		}
 		else{
 			setSuccessFor(mobileNumber);
@@ -156,6 +163,8 @@ function validate() {
 		else{
 			setSuccessFor(mobileNumber);
 		}
+		
+		
 		
 		//email
 		if(emailInput == ""){
@@ -232,12 +241,12 @@ function validate() {
 		}
 		
 		//checkbox
-		if(document.form.box.checked == false){
-			setErrorFor(box, "You must agree to the terms first");
+		if(document.form.agreeCheck.checked == false){
+			setErrorFor(agreeCheck, "You must agree to the terms first");
 			return false;
 		}
 		else{
-			setSuccessFor(box);
+			setSuccessFor(agreeCheck);
 		}
 		
 		
