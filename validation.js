@@ -17,11 +17,14 @@ function validate() {
 	var emailInput = document.getElementById("emailAddress").value;
 	var userNameInput = document.getElementById("userName").value;
 	var userPasswordInput = document.getElementById("userPassword").value;
+	var repeatPasswordInput = document.getElementById("userRepeatPassword").value;
 	var box = document.getElementById("agreeCheck").value;
 	
 	var letters = /[.!#@%&'*+/=?()^-_`{|}~A-Za-z]/g;
 	var numbers = /[0-9.!#@%&'*+/=?()^-_`{|}~]/g;
 	var passwordFormat = /[.!#@%&'*+/=?()^-_`{|}~]/g;
+	var alpha = /[A-Za-z]/g;
+	var numeric = /[0-9]/g;
 	var emailFormat =  /^([a-zA-Z@.]+)$/;
 	var emailFormatTwo = /@ue.edu.ph\s*$/;
 	//var emailWrong = /[.!#@%&'*_-+/=?()^`{|}~] + @[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~]/g;
@@ -177,17 +180,18 @@ function validate() {
 		}
 		
 		//email2
-		if(emailFormat.test(emailInput)){
+		if(emailFormat.test(emailInput) == true){
 			if(emailFormatTwo.test(emailInput) == false){
 				setErrorFor(emailAddress, "Invalid UE Email Address");
+				return false;
 			}
 			else{
 				setSuccessFor(emailAddress);
-				
 			}
 		}
 		else{
 			setErrorFor(emailAddress, "Invalid UE Email Address");
+			return false;
 		}
 		
 		
@@ -220,14 +224,6 @@ function validate() {
 		
 		
 		//password	
-		if(userPasswordInput.match(passwordFormat)){
-			setErrorFor(userPassword, "Please Enter Alphanumeric Characters ");
-			return false;
-		}
-		else{
-			setSuccessFor(userPassword);
-		}
-		
 		if(userPasswordInput == ""){
 			setErrorFor(userPassword, "This Field is Required");
 			return false;	
@@ -242,6 +238,31 @@ function validate() {
 		}
 		else{
 			setSuccessFor(userPassword);
+		}
+		
+		if(numeric.test(userPasswordInput) == true){
+			if(alpha.test(userPasswordInput) == true){
+				setSuccessFor(userPassword);
+			}
+			else{
+			setErrorFor(userPassword, "Please Enter Alphanumeric Characters ");
+			return false;
+			}
+		}
+		else{
+			setErrorFor(userPassword, "Please Enter Alphanumeric Characters ");
+			return false;
+		}
+		
+		
+		
+		//repeat pass
+		if(repeatPasswordInput == ""){
+			setErrorFor(userRepeatPassword, "This Field is Required");
+			return false;	
+		}
+		else{
+			setSuccessFor(userRepeatPassword);
 		}
 		
 		//checkbox
