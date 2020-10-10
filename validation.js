@@ -24,7 +24,7 @@ function validate() {
 	var emailFormat =  /^([a-zA-Z@.]+)$/;
 	var emailFormatTwo = /@ue.edu.ph\s*$/;
 	//var emailWrong = /[.!#@%&'*_-+/=?()^`{|}~] + @[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~]/g;
-	var tel = /[.!#@%+&'*/=?()^-_`{|}~A-Za-z]/g;
+	var tel = /[.!#@%&'*/=?()^-_`{|}~A-Za-z]/g;
 	var userFormat = /[-_A-Za-z]/g;
 	var wrongFormat = /[!#@%&'*+/=?()^`{|}~0-9.]/g;
 	
@@ -156,7 +156,7 @@ function validate() {
 		else{
 			setSuccessFor(mobileNumber);
 		}
-		if(mobileNumberInput.length != 10){
+		if(mobileNumberInput.length != 14){
 			setErrorFor(mobileNumber, "Wrong Format");
 			return false;	
 		}
