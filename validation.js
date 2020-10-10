@@ -224,7 +224,7 @@ function validate() {
 		}
 		
 		if(userPasswordInput.length < 8 ){
-			setErrorFor(userPassword, "Must Contain At Least 8-15 Alphanumeric Characters");
+			setErrorFor(userPassword, "Must Contain At Least 8-15 Alphabet/Numeric Characters");
 			return false;	
 		}
 		else{

@@ -40,10 +40,9 @@
                      
             <h1>Create an Account</h1>
             <br>
-		
+		  
                 <div class="form-control">
-                
-				    <label for="lastName"><b>LAST NAME</b></label>
+                    <label class="lName" for="lastName"><b>LAST NAME</b></label>
 				    <input type="text" placeholder="Last Name" name="lastName" id="lastName" autocomplete="off">
 				    <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
@@ -65,10 +64,10 @@
 			
                 <div class="form-control">
                 
-                    <label class="mInitial" for="middleInitial"><b>M. I.</b></label>
+                    <label class="mInitial" for="middleInitial"><b>M. I. *</b></label>
 				    <input type="text" placeholder="M.I." name="middleInitial" id="middleInitial" maxlength="2" autocomplete="off">
-				    <i style="right: -18px" class="fas fa-check-circle"></i>
-				    <i style="right: 10px" class="fas fa-exclamation-circle"></i>
+				    <i style="right: 3px" class="fas fa-check-circle"></i>
+				    <i style="right: 3px" class="fas fa-exclamation-circle"></i>
 				    <small>Error message</small>
                 
                 </div>
@@ -96,8 +95,8 @@
 						  <option value="3rd">3rd</option>
 						  <option value="5th">5th</option>
 					   </select>
-					   <i style="right: -20px" class="fas fa-check-circle"></i>
-					   <i style="right: -20px" class="fas fa-exclamation-circle"></i>
+					   <i style="right: 16px" class="fas fa-check-circle"></i>
+					   <i style="right: 16px" class="fas fa-exclamation-circle"></i>
 					   <small>Error message</small>
 			    </div>
 			
@@ -105,15 +104,15 @@
             
 				    <label class="uBirthday" for="userBirthday"><b>BIRTHDAY</b></label>
 					   <input type="date" min="1961-01-01" max="2002-10-4" placeholder="Birthday" name="userBirthday" id="userBirthday" autocomplete="off">
-					   <i style="right: -20px" class="fas fa-check-circle"></i>
-					   <i style="right: -20px" class="fas fa-exclamation-circle"></i>
+					   <i style="right: 35px" style="top: 2px" class="fas fa-check-circle"></i>
+					   <i style="right: 35px" class="fas fa-exclamation-circle"></i>
 					   <small>Error message</small>
                 </div>
         </div>
 
 			<div class="form-control">
 				<label for="mobileNumber"><b>MOBILE NUMBER</b></label>
-					<input type="tel"   maxlength="10" name="mobileNumber"  id="mobileNumber" autocomplete="off" >
+					<input type="tel"   maxlength="10" name="mobileNumber"  id="mobileNumber" autocomplete="off" placeholder="9755650473" >
 					<i class="fas fa-check-circle"></i>
 					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>
@@ -137,8 +136,8 @@
         <div class="form-control">
 			<label style="margin-top: 16px;" for="userName"><b>USERNAME</b></label>
 				<input type="text" placeholder="Suggestion: JuanDelaCruz" name="userName" maxlength="15" id="userName" autocomplete="off">
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
+				<i class="fas fa-check-circle" style="top: 48px;"></i>
+				<i class="fas fa-exclamation-circle" style="top: 48px;"></i>
 				<small>Error message</small>
 		</div>
 		
@@ -147,8 +146,8 @@
 			<label for="userPassword"><b>PASSWORD</b></label>
 				<input type="password" placeholder="Password" name="userPassword" maxlength="20" id="userPassword" autocomplete="off" >
                 <i class="far fa-eye" id="togglePassword"></i>
-				<i class="fas fa-check-circle"></i>
-				<i class="fas fa-exclamation-circle"></i>
+				<i class="fas fa-check-circle" style="top: 48px;"></i>
+				<i class="fas fa-exclamation-circle" style="top: 48px;"></i>
 				<small>Error message</small>
               
 		</div>
