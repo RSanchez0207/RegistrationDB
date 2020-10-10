@@ -136,7 +136,7 @@
 
 			<div class="form-control">
 				<label for="mobileNumber"><b>MOBILE NUMBER</b></label>
-					<input type="tel"   maxlength="10" name="mobileNumber"  id="mobileNumber" autocomplete="off" placeholder="9755650473" >
+					<input type="tel"   maxlength="10" name="mobileNumber"  id="mobileNumber" autocomplete="off" value="+63">
 					<i class="fas fa-check-circle"></i>
 					<i class="fas fa-exclamation-circle"></i>
 					<small>Error message</small>
@@ -178,14 +178,15 @@
        <label for="userRepeatPassword"><b>CONFIRM PASSWORD</b></label>
             <input type="password" placeholder="Password" name="userRepeatPassword" id="userRepeatPassword"  autocomplete="off">
             <input type="checkbox" name=checkBoxTwo id=checkBoxTwo onClick="viewRepeatPassword()">
-        
+    <div class="row">
 		<div class="form-control">
 			<input type="checkbox" name="agreeCheck" id="agreeCheck" >
 			<i class="fas fa-check-circle"></i>
 			<i class="fas fa-exclamation-circle"></i>
 			<small>Error message</small>
+            <a href="">I agree to the <b>Terms and Conditions</b> of this website</a>
 		</div>
-        <a href="">I agree to the <b>Terms and Conditions</b> of this website</a>
+  </div>
             
         <button name="loginButton" id="loginButton" onclick="return validate()"> <b>SUBMIT</b>
         </button>
