@@ -26,7 +26,7 @@ function validate() {
 	var alpha = /[A-Za-z]/g;
 	var numeric = /[0-9]/g;
 	var emailFormat =  /^([a-zA-Z@.]+)$/;
-	var emailFormatTwo = /@ue.edu.ph\s*$/;
+	var emailFormatTwo = /[a-zA-Z@.]+@ue.edu.ph\s*$/;
 	//var emailWrong = /[.!#@%&'*_-+/=?()^`{|}~] + @[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~]/g;
 	var tel = /[.!#@%&'*/=?()^-_`{|}~A-Za-z]/g;
 	var userFormat = /[-_A-Za-z]/g;
@@ -137,6 +137,13 @@ function validate() {
 		// validation of age
 		if(newUserBirthday > "20021004" ){
 			setErrorFor(userBirthday, "Ages 18 And Above Only")
+			return false;
+		}
+		else{
+			setSuccessFor(userBirthday);
+		}
+		if(newUserBirthday < "19400101"){
+			setErrorFor(userBirthday, "Invalid Date Range")
 			return false;
 		}
 		else{
