@@ -62,6 +62,7 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 						,$studentNumber,$yearLevel,$userBirthday
 						,$mobileNumber,$emailAddress,$userName
 						,$userPassword]);
+					sleep(2);
 					header("Location:HomePage.html");
 				}
 			
