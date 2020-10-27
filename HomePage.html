@@ -10,35 +10,41 @@
 <body>
 
     <h1>Welcome to RegistrationDB! </h1>
-    
-    <div class="container">
+
+    <form name="form" id="loginform" action="homePage.php" method="POST">
+
+        <div class="container">
         
-        <div class="form-control">
-            <label for="username"><b>USERNAME</b></label>
-                    <input type="text" placeholder="Username" name="username" id="username" required autocomplete="off">
+            <div class="form-control">
+                <label for="username"><b>USERNAME</b></label>
+                        <input type="text" placeholder="Username" name="username" id="username" required autocomplete="off">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+            </div>
+               
+            <div class="form-control">
+                <label for="password"><b>PASSWORD</b></label>
+                    <input type="password" placeholder="Password" name="password" id="password" required autocomplete="off">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>Error message</small>
-        </div>
-           
-        <div class="form-control">
-            <label for="password"><b>PASSWORD</b></label>
-                <input type="password" placeholder="Password" name="password" id="password" required autocomplete="off">
-                    <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
-         
-        </div>
-            <i class="far fa-eye" id="togglePassword"></i>
+             
+            </div>
+                <i class="far fa-eye" id="togglePassword"></i>
+            
+                <button name="loginButton" id="loginButton" onclick="return verify()">           <b>LOGIN</b>
+                 </button>
+    
+            <a href="http://localhost/RegistrationDB/AccountPage.html">No account yet? <b>Register here.</b></a>
         
-            <button name="loginButton" id="loginButton" onclick="return verify()">           <b>LOGIN</b>
-             </button>
-
-        <a href="http://localhost/RegistrationDB/AccountPage.html">No account yet? <b>Register here.</b></a>
+    
+        </div>
     
 
-    </div>
-
+    </form>
+    
+    
     <script>
         const togglePassword = document.querySelector('#togglePassword');   
         const password = document.querySelector('#password');
