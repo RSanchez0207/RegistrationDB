@@ -4,6 +4,7 @@
     <link rel = "stylesheet" href = "HomePage.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="validation.js"></script>
 </head>
 
 
@@ -24,8 +25,9 @@
             </center>
             <i class="far fa-eye" id="togglePassword"></i>
         
-        <button name="loginButton" id="loginButton"type="submit">           <b>LOGIN</b>
+        <button name="loginButton" id="loginButton" onclick="return verify()">           <b>LOGIN</b>
         </button>
+        
        
         <a href="http://localhost/RegistrationDB/AccountPage.html">No account yet? <b>Register here.</b></a>
     
