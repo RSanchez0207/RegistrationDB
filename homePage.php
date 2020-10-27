@@ -18,10 +18,11 @@ $user = $check->fetch();
 //echo implode(',',$user);
 
 if($user[0] == $loginUserName){
-    //goto bionote
+    //Login succesfull
     echo '<script>
-						alert("Login Succesfully");
+						alert("Login Succesfull");
 					 </script>';
+					 sleep(2);
 						
 						echo '<script>
 						window.history.go(-1);
@@ -31,7 +32,7 @@ else{
     echo '<script>
 						alert("Username/Password Dont Exist");
 					 </script>';
-						
+					 sleep(2);
 						echo '<script>
 						window.history.go(-1);
 					 </script>';
