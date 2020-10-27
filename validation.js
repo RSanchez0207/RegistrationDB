@@ -27,7 +27,7 @@ function validate() {
 	var numeric = /[0-9]/g;
 	var emailFormat =  /^([a-zA-Z@.]+)$/;
 	var emailFormatTwo = /[a-zA-Z@.]+@ue.edu.ph\s*$/;
-	//var emailWrong = /[.!#@%&'*_-+/=?()^`{|}~] + @[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~] + .[.!#@%&'*_-+/=?()^`{|}~]/g;
+	
 	var tel = /[.!#@%&'*/=?()^-_`{|}~A-Za-z]/g;
 	var userFormat = /[-_A-Za-z]/g;
 	var wrongFormat = /[!#@%&'*+/=?()^`{|}~0-9.]/g;
@@ -240,7 +240,7 @@ function validate() {
 		}
 		
 		if(userPasswordInput.length < 8 ){
-			setErrorFor(userPassword, "Please 8-15 Enter Alphanumeric Characters");
+			setErrorFor(userPassword, "Please 8-20 Enter Alphanumeric Characters");
 			return false;	
 		}
 		else{
@@ -252,16 +252,14 @@ function validate() {
 				setSuccessFor(userPassword);
 			}
 			else{
-			setErrorFor(userPassword, "Please 8-15 Enter Alphanumeric Characters");
+			setErrorFor(userPassword, "Please Enter Alphanumeric Characters");
 			return false;
 			}
 		}
 		else{
-			setErrorFor(userPassword, "Please 8-15 Enter Alphanumeric Characters ");
+			setErrorFor(userPassword, "Please Enter Alphanumeric Characters ");
 			return false;
 		}
-		
-		
 		
 		//repeat pass
 		if(repeatPasswordInput == ""){

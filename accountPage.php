@@ -38,7 +38,7 @@ function insertData($lastName,$firstName,$middleInitial,$studentNumber,$yearLeve
 		require 'Database.php';
 		
 		$sql =  "INSERT INTO usertable (lastName, firstName, middleInitial, studentNumber
-		, yearLevel, birthDate, mobileNumber, ueEmailAddress, username, password) VALUES (?,?,?,?,?,?,?,?,?,?)";
+		, yearLevel, birthDate, mobileNumber, ueEmailAddress, userName, userPassword) VALUES (?,?,?,?,?,?,?,?,?,?)";
 		
 		
 		//username database
