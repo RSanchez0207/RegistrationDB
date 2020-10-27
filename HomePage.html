@@ -14,15 +14,24 @@
     
     <div class="container">
         
-        <label for="username"><b>USERNAME</b></label>
-            <center>
-                <input type="text" placeholder="Username" name="username" id="username" required autocomplete="off">
-            </center>
-        <label for="password"><b>PASSWORD</b></label>
-            <center>
+        <div class="form-control">
+            <label for="username"><b>USERNAME</b></label>
+                    <input type="text" placeholder="Username" name="username" id="username" required autocomplete="off">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+        </div>
+           
+        <div class="form-control">
+            <label for="password"><b>PASSWORD</b></label>
                 <input type="password" placeholder="Password" name="password" id="password" required autocomplete="off">
-            </center>
-            <i class="far fa-eye" id="togglePassword"></i>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+         
+           
+        </div>
+        <i class="far fa-eye" id="togglePassword"></i>
         
         <button name="loginButton" id="loginButton"type="submit">           <b>LOGIN</b>
         </button>
